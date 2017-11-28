@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title> EJERCICIO FACTURA </title>
+        <script src="js/funcFactura.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <p> Seleccionaaaaaa el equipo y sus componentes</p>
+        <table width="1200" border=1 align="center" bgcolor="#EEEEEE">
+            <tr>
+                <td width="1200" colspan="2">
+                    <p> Selecciona el equipo y sus componentes</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="1200" colspan="2">
+                    <div class="tipoEquipo" >
+                        <select name="opcEquipo" id="idNireCombo" onchange="elegirEquipo()">
+                            <option value="" SELECTED>Selecciona un equipo</option>
+                            <option value="EquipoA">Equipo A</option>
+                            <option value="EquipoB">Equipo B</option>
+                        </select>
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="600">
+                    <div class="tipoProcesador1">
+                        <input type="radio" name="opcProcesador1" value="0" onclick="CalcularImporte()" disabled/>Procesador 1<br>
+                        <input type="radio" name="opcProcesador1" value="1" onclick="CalcularImporte()" disabled/>Procesador 2<br>
+                        <input type="radio" name="opcProcesador1" value="2" onclick="CalcularImporte()" disabled/>Procesador 3<br>
+                        <input type="radio" name="opcProcesador1" value="3" onclick="CalcularImporte()" disabled/>Procesador 4<br>
+
+
+                    </div>
+                </td>
+                <td width="600">
+                    <div class="tipoProcesador2" onclick="CalcularImporte()" >
+
+                        <input type="radio" name="opcProcesador2" value="0" disabled/>Procesador 1<br>
+                        <input type="radio" name="opcProcesador2" value="1"  disabled/>Procesador 2<br>
+                        <input type="radio" name="opcProcesador2" value="2"  disabled/>Procesador 3<br>
+                        <input type="radio" name="opcProcesador2" value="3"  disabled/>Procesador 4<br>
+
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="1200" colspan="2">
+                    <div>Complementos</div>
+                    <div class="Componentes">
+
+                        <input type="checkbox" name="Componentes" value="0" onclick="CalcularImporte()"/>Componentes 1
+                        <input type="checkbox" name="Componentes" value="1" onclick="CalcularImporte()"/>Componentes 2
+                        <input type="checkbox" name="Componentes" value="2" onclick="CalcularImporte()"/>Componentes 3
+                        <input type="checkbox" name="Componentes" value="3" onclick="CalcularImporte()"/>Componentes 4
+                        <input type="checkbox" name="Componentes" value="4" onclick="CalcularImporte()"/>Componentes 5
+                        <input type="checkbox" name="Componentes" value="5" onclick="CalcularImporte()"/>Componentes 6
+
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+
+        <div class='Calculos'>
+
+            <input type="button" name="Limpiar" id="LIMPIAR" value="NUEVO CALCULO" onclick="vaciarCampos()">
+
+        </div>
+        <div id="resultado">
+
+        </div>
+    </body>
+</html>
+
